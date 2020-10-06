@@ -16,33 +16,6 @@ const ScrollingWrapper = styled.div`
   }
 `;
 
-export function ScrollingContainers() {
-  return (
-    <ScrollingWrapper>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-      <div className="card w-24 h-24 bg-gray-400 text-center rounded-md mx-2">
-        <h2>Card</h2>
-      </div>
-    </ScrollingWrapper>
-  );
+export function ScrollingContainers({ children }) {
+  return <ScrollingWrapper>{children}</ScrollingWrapper>;
 }
