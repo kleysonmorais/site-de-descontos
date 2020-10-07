@@ -1,9 +1,13 @@
 import React from 'react';
 
-export function GridTemplate({ children }) {
+export function GridTemplate({ children, mobileCols = 1, desktopCols = 3 }) {
   return (
-    <div>
-      <div className="grid grid-cols-1 md:grid-cols-3">{children}</div>
+    <div className="flex justify-center">
+      <div
+        className={`grid grid-cols-${mobileCols} md:grid-cols-${desktopCols}`}
+      >
+        {children}
+      </div>
     </div>
   );
 }

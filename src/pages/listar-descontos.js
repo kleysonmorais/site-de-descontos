@@ -79,7 +79,7 @@ export default function ListarDescontosPage() {
         </div>
       </div>
 
-      <DynamicLabelBottomNavigationWithNoSSR />
+      <DynamicLabelBottomNavigationWithNoSSR selected="listar-descontos" />
     </>
   );
 }
