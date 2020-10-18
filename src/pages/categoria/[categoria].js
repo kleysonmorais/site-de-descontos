@@ -1,7 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { GridTemplate } from 'app/UI/components/grid-template';
-import { CategoryCardItem } from 'app/UI/components/category-card-item';
 import { DiscountCardItem } from 'app/UI/components/discount-card-item';
 
 const DynamicAppTabNavigationWithNoSSR = dynamic(
@@ -14,23 +13,12 @@ const DynamicLabelBottomNavigationWithNoSSR = dynamic(
   { ssr: false }
 );
 
-export default function BuscaPage() {
+export default function CategoriaPage() {
   return (
     <>
       <DynamicAppTabNavigationWithNoSSR />
 
-      <div className="container mx-auto my-4">
-        {/* <h2 className="text-xl font-medium mx-2">Categorias populares</h2>
-
-        <GridTemplate mobileCols={2} desktopCols={4}>
-          <CategoryCardItem type="toSearch" />
-          <CategoryCardItem type="toSearch" />
-          <CategoryCardItem type="toSearch" />
-          <CategoryCardItem type="toSearch" />
-          <CategoryCardItem type="toSearch" />
-          <CategoryCardItem type="toSearch" />
-        </GridTemplate> */}
-
+      <div className="my-4">
         <GridTemplate>
           <DiscountCardItem />
           <DiscountCardItem />
@@ -44,7 +32,7 @@ export default function BuscaPage() {
         </GridTemplate>
       </div>
 
-      <DynamicLabelBottomNavigationWithNoSSR selected="busca" />
+      <DynamicLabelBottomNavigationWithNoSSR selected="" />
     </>
   );
 }
